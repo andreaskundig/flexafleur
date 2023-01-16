@@ -215,9 +215,9 @@ a:focus {
 .slide {
     display: block;
 
-    width: 900px;
+    width: 700px;
     height: 700px;
-    padding: 40px 60px;
+    padding: 20px 20px;
 
     background-color: white;
     border: 1px solid rgba(0, 0, 0, .3);
@@ -231,6 +231,19 @@ a:focus {
     font-size: 30px;
     line-height: 36px;
     letter-spacing: -1px;
+
+    /* https://www.freecodecamp.org/news/how-to-center-an-image-in-a-div-css/ */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.vertical {
+    width: 350px;
+}
+
+.horizontal {
+    height: 350px;
 }
 
 .slide q {
