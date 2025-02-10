@@ -165,9 +165,11 @@ const addScript = async src => new Promise((resolve, reject) => {
 });
 
 async function flexagon(imgDir) {
-  const body = makeBody((imgDir));
-  document.querySelector('head').insertAdjacentHTML('afterbegin', head);
-  document.querySelector('body').insertAdjacentHTML('afterbegin', body);
-  await addScript('js/impress.js');
-  impress().init();
+    document.addEventListener('DOMContentLoaded', async () => {
+        const body = makeBody((imgDir));
+        document.querySelector('head').insertAdjacentHTML('afterbegin', head);
+        document.querySelector('body').insertAdjacentHTML('afterbegin', body);
+        await addScript('js/impress.js');
+        impress().init();
+    });
 }
